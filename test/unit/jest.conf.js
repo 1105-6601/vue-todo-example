@@ -24,7 +24,9 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/main.js',
-    '!src/router/index.js',
+    '!src/mutation-types.js',
+    '!src/router.js',
+    '!src/store.js',
     '!**/node_modules/**'
   ]
-}
+};

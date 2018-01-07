@@ -4,7 +4,7 @@
     <h1>Tasks:</h1>
     <v-radio :options="modes" @change="modeChange" :default="mode"/>
     <ul>
-      <li v-for="task in tasks" is="task-item" :task="task"></li>
+      <li v-for="(task, index) in tasks" is="task-item" :task="task" :index="index"></li>
     </ul>
   </div>
 </template>

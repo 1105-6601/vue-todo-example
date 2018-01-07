@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-input name="task" @enter="submit" @change="change" :clear="clearTrigger" placeholder="Input then enter."/>
-    <v-button text="Add" @click="submit"/>
+    <v-button class="add" text="Add" @click="submit"/>
   </div>
 </template>
 

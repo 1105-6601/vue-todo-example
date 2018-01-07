@@ -1,8 +1,8 @@
 <template>
-  <li :class="{ done: task.done }">
+  <li :class="{ done: task.done }" :index="index">
     <span>{{ task.title }}</span>
-    <v-button :text="task.done ? 'Incomplete' : 'Done'" class="default sm" @click="done(task)"/>
-    <v-button text="Delete" class="default sm" @click="del(task)"/>
+    <v-button :text="task.done ? 'Incomplete' : 'Done'" class="done default sm" @click="done(task)"/>
+    <v-button text="Delete" class="del default sm" @click="del(task)"/>
   </li>
 </template>
 
@@ -12,7 +12,7 @@ import * as MT from '@/mutation-types';
 
 export default {
   name: 'task-item',
-  props: ['task'],
+  props: ['task', 'index'],
   methods: {
     done(task) {
       this.$store.commit(MT.DONE_TASK, task);
